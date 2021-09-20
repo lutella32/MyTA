@@ -11,7 +11,7 @@
         android:layout_width="205dp"
         android:layout_height="61dp"
         android:layout_marginTop="52dp"
-        android:contentDescription="@string/mon_suivi_cardiaque"
+        android:contentDescription="mon_suivi_cardiaque"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/suivi"
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/have_you_ever_talked_about_your_heart_with_your_doctor"
+        android:text="Have you ever talked about your heart with your doctor ?"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
         tools:ignore="TextContrastCheck" />
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:buttonTint="#040404"
-        android:text="@string/yes"
+        android:text="Yes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         tools:ignore="DuplicateSpeakableTextCheck" />
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:buttonTint="#040404"
-        android:text="@string/yes"
+        android:text="Yes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:buttonTint="#040404"
-        android:text="@string/yes"
+        android:text="Yes"
         android:textColor="#050505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:buttonTint="#040404"
-        android:text="@string/no"
+        android:text="No"
         app:layout_constraintStart_toEndOf="@+id/radioButton11"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         tools:ignore="DuplicateSpeakableTextCheck" />
@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:buttonTint="#040404"
-        android:text="@string/no"
+        android:text="No"
         app:layout_constraintStart_toEndOf="@+id/radioButton14"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -86,7 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:buttonTint="#040404"
-        android:text="@string/no"
+        android:text="No"
         app:layout_constraintStart_toEndOf="@+id/radioButton24"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -95,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="@string/have_you_ever_did_a_heart_checkpoint"
+        android:text="Have you ever did a heart checkpoint ?"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioButton11"
         tools:ignore="TextContrastCheck" />
@@ -105,7 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/have_you_ever_had_an_appointment_with_a_cardiologist"
+        android:text="Have you ever had an appointment with a cardiologist ?"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioButton15"
         tools:ignore="TextContrastCheck" />
@@ -116,7 +116,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
         android:layout_marginEnd="72dp"
-        android:text="@string/next"
+        android:text="next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioButton25"
         tools:ignore="TextContrastCheck" />
@@ -127,7 +127,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="76dp"
-        android:text="@string/previous"
+        android:text="previous"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioButton24"
         tools:ignore="TextContrastCheck" />
