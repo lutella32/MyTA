@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void start(View view) {
-        final EditText edit1= (EditText) findViewById(R.id.textinput);
-      // EditText text = (EditText) edit1.getText();
-      // String n=text.toString();
-     //  if(n.equals("")){
+        final TextInputEditText edit1= (TextInputEditText) findViewById(R.id.textinput);
+        String texte = String.valueOf(edit1.getText());
+
+       if(texte.equals("")){
             Log.d("start","h");
             Context context = getApplicationContext();
             CharSequence textToast = "You need to enter name";
@@ -33,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
 
             Toast toast = Toast.makeText(context, textToast, duration);
             toast.show();
-       // }
-     // else{
+        }
+      else{
         setContentView(R.layout.activity_starting);
-    //}
+    }
     }
 
 }
