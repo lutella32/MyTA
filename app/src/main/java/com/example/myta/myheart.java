@@ -14,5 +14,6 @@ public class myheart extends AppCompatActivity {
     }
 
     public void goSuivi(View view) {
+        setContentView(R.layout.activity_starting);
     }
 }

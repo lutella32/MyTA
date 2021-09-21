@@ -14,5 +14,6 @@ public class Starting extends AppCompatActivity {
     }
 
     public void goHeart(View view) {
+        setContentView(R.layout.activity_myheart);
     }
 }

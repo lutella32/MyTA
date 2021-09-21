@@ -112,18 +112,19 @@
             tools:ignore="TextContrastCheck" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/finish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="76dp"
             android:layout_marginEnd="72dp"
+            android:onClick="gofinish"
             android:text="next"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioButton25"
             tools:ignore="TextContrastCheck" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/previousHeart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="44dp"
