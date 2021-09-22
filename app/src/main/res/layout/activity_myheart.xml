@@ -161,7 +161,7 @@
         android:id="@+id/textView3"
         android:layout_width="192dp"
         android:layout_height="33dp"
-        android:text="Have you a cardiac desease?"
+        android:text="@string/have_you_a_cardiac_desease"
         app:layout_constraintBottom_toBottomOf="@+id/textView7"
         app:layout_constraintTop_toTopOf="@+id/textView7"
         app:layout_constraintVertical_bias="1.0"
