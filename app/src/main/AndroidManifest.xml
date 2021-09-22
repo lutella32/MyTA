@@ -19,8 +19,8 @@
             android:name=".myheart"
             android:exported="true" />
         <activity
-            android:name=".Stating"
-            android:exported="true" />
+            android:name=".Starting"
+            android:exported="true"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

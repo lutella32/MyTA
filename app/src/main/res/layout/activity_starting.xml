@@ -84,18 +84,18 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/radioButton4" />
 
-<Button
-    android:id="@+id/goHeart"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="#673AB7"
-    android:backgroundTint="#C51818"
-    android:text="next"
-    android:onClick="goHeart"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/radioButton5" />
+    <Button
+        android:id="@+id/goToHeart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#673AB7"
+        android:backgroundTint="#C51818"
+        android:onClick="goHeart"
+        android:text="next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton5" />
 
 <ImageView
     android:id="@+id/imageView3"

@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">MyTA</string>
+    <string name="do_you_know_your_imc">Do you know your IMC?</string>
+    <string name="previous">Previous</string>
+    <string name="no">No</string>
+    <string name="next">NEXT</string>
+    <string name="yes">Yes</string>
+    <string name="maybe">Maybe</string>
+    <string name="have_you_a_cardiac_desease">Have you a cardiac desease?</string>
+    <string name="have_you_a_parent_with_cardiac_problem">Have you a parent with cardiac problem ?</string>
+    <string name="are_you_diabetic">Are you diabetic ?</string>
+    <string name="todo">TODO</string>
+    <string name="have_you_cholesterol_problem">Have you cholesterol problem?</string>
+    <string name="have_you_hypertension">Have you hypertension?</string>
+    <string name="i_don_t_know">I don\'t know</string>
 </resources>
