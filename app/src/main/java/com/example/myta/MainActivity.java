@@ -37,7 +37,23 @@ public class MainActivity extends AppCompatActivity {
         }
       else{
         setContentView(R.layout.activity_starting);
-    }
+      }
     }
 
+    //Changements de page : next
+    public void goHeart(View view) {
+        setContentView(R.layout.activity_myheart);
+    }
+    public void goSuivi(View view) {
+        setContentView(R.layout.activity_suivi);
+    }
+    public void gofinish(View view) {
+        setContentView(R.layout.activity_results);
+    }
+
+    //Retours à la page précédente
+    public void goBackStart(View view) { onBackPressed(); }
+    public void goBackHeart(View view) {
+        onBackPressed();
+    }
 }

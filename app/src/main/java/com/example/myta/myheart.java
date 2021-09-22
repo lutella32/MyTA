@@ -13,7 +13,6 @@ public class myheart extends AppCompatActivity {
         setContentView(R.layout.activity_myheart);
     }
 
-    public void goSuivi(View view) {
-        setContentView(R.layout.activity_starting);
-    }
+
+
 }

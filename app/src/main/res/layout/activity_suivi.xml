@@ -130,6 +130,7 @@
             android:layout_marginStart="44dp"
             android:layout_marginTop="76dp"
             android:text="previous"
+            android:onClick="goBackHeart"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioButton24"
             tools:ignore="TextContrastCheck" />

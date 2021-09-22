@@ -13,7 +13,5 @@ public class Suivi extends AppCompatActivity {
         setContentView(R.layout.activity_suivi);
     }
 
-    public void gofinish(View view) {
-        setContentView(R.layout.activity_results);
-    }
+
 }

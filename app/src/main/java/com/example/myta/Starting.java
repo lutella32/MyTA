@@ -13,7 +13,5 @@ public class Starting extends AppCompatActivity {
         setContentView(R.layout.activity_starting);
     }
 
-    public void goHeart(View view) {
-        setContentView(R.layout.activity_myheart);
-    }
+
 }
