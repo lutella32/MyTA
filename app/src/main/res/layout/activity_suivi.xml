@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#6CDDDD"
     tools:context=".Suivi">
 
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="205dp"
-            android:layout_height="61dp"
+            android:layout_width="214dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="52dp"
             android:contentDescription="mon_suivi_cardiaque"
             app:layout_constraintStart_toStartOf="parent"
@@ -22,13 +24,14 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="Have you ever talked about your heart with your doctor ?"
+            android:textColor="#040303"
             app:layout_constraintBottom_toTopOf="@+id/textView8"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView4"
-            app:layout_constraintVertical_bias="0.073"
+            app:layout_constraintVertical_bias="0.069"
             tools:ignore="TextContrastCheck" />
 
         <TextView
@@ -38,6 +41,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginBottom="92dp"
             android:text="Have you ever did a heart checkpoint ?"
+            android:textColor="#040303"
             app:layout_constraintBottom_toTopOf="@+id/textView10"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="TextContrastCheck" />
@@ -48,6 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="128dp"
             android:text="Have you ever had an appointment with a cardiologist ?"
+            android:textColor="#040303"
             app:layout_constraintBottom_toTopOf="@+id/finish"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.238"
@@ -85,13 +90,13 @@
             android:layout_marginTop="32dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintHorizontal_bias="0.432"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10">
 
                 <RadioButton
                     android:id="@+id/radioButton24"
-                    android:layout_width="84dp"
+                    android:layout_width="70dp"
                     android:layout_height="53dp"
                     android:buttonTint="#040404"
                     android:text="Yes"
@@ -99,8 +104,8 @@
 
                 <RadioButton
                     android:id="@+id/radioButton25"
-                    android:layout_width="94dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="88dp"
+                    android:layout_height="52dp"
                     android:buttonTint="#040404"
                     android:text="No" />
         </RadioGroup>
@@ -111,10 +116,10 @@
             android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@+id/textView10"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.434"
+            app:layout_constraintHorizontal_bias="0.403"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8"
-            app:layout_constraintVertical_bias="0.424">
+            app:layout_constraintVertical_bias="0.486">
 
                 <RadioButton
                     android:id="@+id/radioButton14"
@@ -125,8 +130,8 @@
 
                 <RadioButton
                     android:id="@+id/radioButton15"
-                    android:layout_width="87dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content"
                     android:buttonTint="#040404"
                     android:text="No" />
         </RadioGroup>

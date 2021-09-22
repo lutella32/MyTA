@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F38299"
     tools:context=".myheart">
 
     <TextView
@@ -11,72 +12,76 @@
         android:layout_width="164dp"
         android:layout_height="26dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="24dp"
         android:text="Do you know your IMC?"
+        android:textColor="#050505"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
-        <RadioGroup
-            android:id="@+id/radioGroup6"
-            android:layout_width="150dp"
-            android:layout_height="155dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.724"
-            app:layout_constraintStart_toEndOf="@+id/radioGroup3"
-            app:layout_constraintTop_toBottomOf="@+id/textView9">
+    <RadioGroup
+        android:id="@+id/radioGroup6"
+        android:layout_width="150dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup3"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
 
-            <RadioButton
-                android:id="@+id/radioButton16"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Yes" />
+        <RadioButton
+            android:id="@+id/radioButton16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yes" />
 
-            <RadioButton
-                android:id="@+id/radioButton17"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="No"
-                tools:ignore="DuplicateSpeakableTextCheck" />
+        <RadioButton
+            android:id="@+id/radioButton17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
-            <RadioButton
-                android:id="@+id/radioButton23"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="I don't know" />
+        <RadioButton
+            android:id="@+id/radioButton23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I don't know" />
 
-        </RadioGroup>
+    </RadioGroup>
 
-        <TextView
-            android:id="@+id/textView45"
-            android:layout_width="192dp"
-            android:layout_height="33dp"
-            android:text="Have you hypertension?"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="192dp"
+        android:layout_height="33dp"
+        android:text="Have you hypertension?"
+        android:textColor="#050505"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
 
-        <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="116dp"
-            android:layout_height="99dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.71"
-            app:layout_constraintStart_toEndOf="@+id/radioGroup5"
-            app:layout_constraintTop_toBottomOf="@+id/textView45">
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="116dp"
+        android:layout_height="99dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.71"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup5"
+        app:layout_constraintTop_toBottomOf="@+id/textView45">
 
-            <RadioButton
-                android:id="@+id/radioButton20"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Yes" />
+        <RadioButton
+            android:id="@+id/radioButton20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yes" />
 
-            <RadioButton
-                android:id="@+id/radioButton21"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="No" />
+        <RadioButton
+            android:id="@+id/radioButton21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No" />
 
-        </RadioGroup>
+    </RadioGroup>
 
     <RadioGroup
         android:id="@+id/radioGroup2"
@@ -99,7 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No"
-            android:textColor="#37474F"
+            android:textColor="#020202"
             tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
     </RadioGroup>
@@ -108,21 +113,24 @@
         android:id="@+id/textView6"
         android:layout_width="192dp"
         android:layout_height="33dp"
-        android:layout_marginEnd="216dp"
+        android:layout_marginEnd="212dp"
         android:text="Are you diabetic ?"
+        android:textColor="#050505"
         app:layout_constraintBottom_toBottomOf="@+id/textView45"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="190dp"
         android:layout_height="47dp"
-        android:layout_marginEnd="36dp"
         android:text="Have you a parent with cardiac problem ?"
+        android:textColor="#050505"
         app:layout_constraintBottom_toBottomOf="@+id/textView9"
-        app:layout_constraintEnd_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/textView9" />
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.19"
+        tools:layout_editor_absoluteX="8dp" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -130,22 +138,22 @@
         android:layout_height="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.088"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/capture" />
 
     <Button
-            android:id="@+id/gobackS"
-            android:layout_width="115dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginBottom="24dp"
-            android:text="Previous"
-            android:onClick="goBackStart"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/gobackS"
+        android:layout_width="115dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="goBackStart"
+        android:text="Previous"
+        app:layout_constraintBottom_toBottomOf="@+id/goSuivi"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView7"
@@ -154,6 +162,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="12dp"
         android:text="Have you cholesterol problem?"
+        android:textColor="#050505"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -161,20 +170,22 @@
         android:id="@+id/textView3"
         android:layout_width="192dp"
         android:layout_height="33dp"
+        android:layout_marginStart="8dp"
         android:text="@string/have_you_a_cardiac_desease"
+        android:textColor="#050505"
         app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView7"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="3dp" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
-            android:id="@+id/divider"
-            android:layout_width="1dp"
-            android:layout_height="729dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="729dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/radioGroup3"
@@ -183,7 +194,8 @@
         android:layout_marginStart="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/radioGroup6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.592">
 
         <RadioButton
             android:id="@+id/radioButton9"
@@ -211,9 +223,10 @@
         android:layout_height="111dp"
         app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView45">
+        app:layout_constraintTop_toBottomOf="@+id/textView45"
+        app:layout_constraintVertical_bias="0.0">
 
         <RadioButton
             android:id="@+id/radioButton13"
@@ -234,9 +247,10 @@
         android:layout_height="93dp"
         app:layout_constraintBottom_toBottomOf="@+id/radioGroup2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintHorizontal_bias="0.073"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/radioGroup2">
+        app:layout_constraintTop_toTopOf="@+id/radioGroup2"
+        app:layout_constraintVertical_bias="0.0">
 
         <RadioButton
             android:id="@+id/radioButton6"
@@ -252,16 +266,18 @@
             tools:ignore="TouchTargetSizeCheck" />
     </RadioGroup>
 
-        <Button
-            android:id="@+id/goSuivi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:text="NEXT"
-            android:onClick="goSuivi"
-            app:layout_constraintBottom_toBottomOf="@+id/gobackS"
-            app:layout_constraintStart_toEndOf="@+id/gobackS"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup6"
-            app:layout_constraintVertical_bias="1.0" />
+    <Button
+        android:id="@+id/goSuivi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:onClick="goSuivi"
+        android:text="NEXT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/gobackS"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup6"
+        app:layout_constraintVertical_bias="0.298" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,6 +17,8 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class MainActivity extends AppCompatActivity {
 
+    Person person;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,27 +41,10 @@ public class MainActivity extends AppCompatActivity {
       else{
            Log.d("start","you are in start");
            Intent lecture = new Intent(this, Starting.class);
+           lecture.putExtra("FromNametostarting", this.person);
            startActivity(lecture);
          //  setContentView(R.layout.activity_starting);
       }
     }
 
-    //Changements de page : next
-//    public void goHeart(View view) {
-//
-//        //setContentView(R.layout.activity_myheart);
-//        Intent lecturechant = new Intent(this, myheart.class);
-//        startActivity(lecturechant);
-//
-//    }
-//    public void goSuivi(View view) {
-//        setContentView(R.layout.activity_suivi);
-//    }
-//    public void gofinish(View view) {
-//        setContentView(R.layout.activity_results);
-//    }
-
-    //Retours à la page précédente
-  //  public void goBackStart(View view) { onBackPressed(); }
-  //  public void goBackHeart(View view) {onBackPressed();}
 }
