@@ -10,8 +10,8 @@ import androidx.annotation.RequiresApi;
 public class Person implements Parcelable {
 
 
-    public enum Genre{man, women, undifined};
-    public enum Age{less40, between40and60, more60};
+    public enum Genre{man, woman, undifined};
+    public enum Age{LessThan40, between40and60, more60};
     public enum Imc{yes, no, IDontKnow};
     public enum ParentPb{yes, no, maybe};
 
@@ -27,7 +27,7 @@ public class Person implements Parcelable {
     public Person(){
         this.setName(Person.DEFAULT_NAME);
         this.setGenre(Genre.undifined);
-        this.setAge(Age.less40);
+        this.setAge(Age.LessThan40);
         this.setImc(Imc.IDontKnow);
         this.setParentPb(ParentPb.maybe);
         this.setCardiacDisease(false);
@@ -122,13 +122,13 @@ public class Person implements Parcelable {
         dest.writeInt(this.getParentPb().ordinal());
 
         //dest.writeBoolean() requires API 29
-        dest.writeBoolean(this.getCardiacDisease());
+/*        dest.writeBoolean(this.getCardiacDisease());
         dest.writeBoolean(this.getCholestPb());
         dest.writeBoolean(this.getDiab());
         dest.writeBoolean(this.getDoctor());
         dest.writeBoolean(this.getCheckpoint());
         dest.writeBoolean(this.getAppointment());
-        dest.writeBoolean(this.getHypertension());
+        dest.writeBoolean(this.getHypertension());*/
     }
 
     public static final Parcelable.Creator<Person> CREATOR
@@ -150,13 +150,13 @@ public class Person implements Parcelable {
         this.setAge(Age.values()[in.readInt()]);
         this.setImc(Imc.values()[in.readInt()]);
         this.setParentPb(ParentPb.values()[in.readInt()]);
-        this.setCholestPb(in.readBoolean());
+/*        this.setCholestPb(in.readBoolean());
         this.setCardiacDisease(in.readBoolean());
         this.setDoctor(in.readBoolean());
         this.setDiab(in.readBoolean());
         this.setCheckpoint(in.readBoolean());
         this.setHypertension(in.readBoolean());
-        this.setAppointment(in.readBoolean());
+        this.setAppointment(in.readBoolean());*/
     }
 
 }

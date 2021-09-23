@@ -106,13 +106,13 @@
             android:layout_width="129dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"
-            android:text="a men" />
+            android:text="man" />
 
         <RadioButton
             android:id="@+id/radioButton"
             android:layout_width="135dp"
             android:layout_height="wrap_content"
-            android:text="a women" />
+            android:text="woman" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
