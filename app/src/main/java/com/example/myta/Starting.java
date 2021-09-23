@@ -87,6 +87,7 @@ public class Starting extends AppCompatActivity {
             if (transferredPerson!=null){
                 this.person = transferredPerson;
                 this.person.print();
+                Log.d(Starting.TAG, "Personne ok");
             }
             else{
                 Log.d(Starting.TAG, "No person found after transfer from main");
