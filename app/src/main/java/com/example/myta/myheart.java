@@ -11,11 +11,26 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class myheart extends AppCompatActivity {
-
+    private Person person;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myheart);
+        person = new Person();
+        Intent intent = getIntent();
+        if(intent != null) {
+            Person transferredPerson = intent.getParcelableExtra("FromNameToStarting");
+            if (transferredPerson != null) {
+                this.person = transferredPerson;
+                this.person.print();
+            }
+            else {
+                Log.d("Starting", "No Person found after transfer from Activity1");
+            }
+        }
+        else {
+            Log.d("starting", "Error when transferring from Activity1");
+        }
     }
 
     public void goSuivi(View view) {

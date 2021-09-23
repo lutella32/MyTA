@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyTA</string>
+    <string name="do_you_know_your_imc">Connaissez -vou votre IMC?</string>
+    <string name="previous">Précédent</string>
+    <string name="no">Non</string>
+    <string name="next">Suivant</string>
+    <string name="yes">Oui</string>
+    <string name="maybe">Peut -être</string>
+    <string name="have_you_a_parent_with_cardiac_problem">Avez-vous un parent avec une maladie cardiac?</string>
+    <string name="are_you_diabetic">Etes-vous diabetic?</string>
+    <string name="todo">A Faire</string>
+    <string name="have_you_cholesterol_problem">Avez -vous des problème de chokestérol?</string>
+    <string name="have_you_hypertension">Avez-vous de l\'hypertension?</string>
+    <string name="i_don_t_know">Je ne sais pas?</string>
+    <string name="have_you_a_cardiac_desease">Avez vous une maladie cardiac?</string>
+</resources>

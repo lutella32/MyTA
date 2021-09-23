@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public void start(android.view.View v) {
         final TextInputEditText edit1= (TextInputEditText) findViewById(R.id.textinput);
         String texte = String.valueOf(edit1.getText());
+        person = new Person();
 
        if(texte.equals("")){
             Log.d("start","h");
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
       else{
            Log.d("start","you are in start");
            Intent lecture = new Intent(this, Starting.class);
+           person.setName(texte);
            lecture.putExtra("FromNameToStarting", this.person);
            startActivity(lecture);
          //  setContentView(R.layout.activity_starting);

@@ -21,7 +21,26 @@ public class Starting extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         processIntentData();
         setContentView(R.layout.activity_starting);
+        person = new Person();
+
+        Intent intent = getIntent();
+        if(intent != null) {
+            Person transferredPerson = intent.getParcelableExtra("FromNameToStarting");
+            if (transferredPerson != null) {
+                this.person = transferredPerson;
+                this.person.print();
+            }
+            else {
+                Log.d("Starting", "No Person found after transfer from Activity1");
+            }
+        }
+        else {
+            Log.d("starting", "Error when transferring from Activity1");
+        }
+
     }
+
+
 
     public void goHeart(View view) {
         RadioButton radio1 = (RadioButton) findViewById(R.id.radioButton);
@@ -49,8 +68,13 @@ public class Starting extends AppCompatActivity {
             } else {
                 Log.d("starting","you are in checked;");
                 //setContentView(R.layout.activity_myheart);
-                Intent lecturechant = new Intent(this, myheart.class);
-                startActivity(lecturechant);
+
+                Intent lecture= new Intent(this, myheart.class);
+                person.setAge(40);
+
+                lecture.putExtra("FromNameToStarting", this.person);
+                startActivity(lecture);
+
             }
 
         }
