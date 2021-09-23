@@ -45,9 +45,9 @@ public class Starting extends AppCompatActivity {
     public void goHeart(View view) {
         RadioButton woman = (RadioButton) findViewById(R.id.radioButton);
         RadioButton man = (RadioButton) findViewById(R.id.radioButton2);
-        RadioButton radio3 = (RadioButton) findViewById(R.id.radioButton3);
-        RadioButton radio4 = (RadioButton) findViewById(R.id.radioButton4);
-        RadioButton radio5 = (RadioButton) findViewById(R.id.radioButton5);
+        RadioButton less = (RadioButton) findViewById(R.id.radioButton3);
+        RadioButton between = (RadioButton) findViewById(R.id.radioButton4);
+        RadioButton more = (RadioButton) findViewById(R.id.radioButton5);
         if (!(man.isChecked() | woman.isChecked())) {
             Context context = getApplicationContext();
             CharSequence textToast = "You need to enter an answer";
@@ -63,7 +63,7 @@ public class Starting extends AppCompatActivity {
                 person.setGenre(Person.Genre.woman);
             }
             Log.d("starting","you are in checked;");
-            if (!(radio3.isChecked() | radio4.isChecked() | radio5.isChecked())) {
+            if (!(less.isChecked() | between.isChecked() | more.isChecked())) {
                 Context context = getApplicationContext();
                 CharSequence textToast = "You need to enter an answer";
                 int duration = Toast.LENGTH_SHORT;
@@ -72,12 +72,18 @@ public class Starting extends AppCompatActivity {
                 toast.show();
 
             } else {
+                if (less.isChecked() && !( between.isChecked() && more.isChecked())){
+                    person.setAge(Person.Age.LessThan40);
+                }
+                if (between.isChecked() && !( less.isChecked() && more.isChecked())){
+                    person.setAge(Person.Age.between40and60);
+                }
+                if (more.isChecked() && !( less.isChecked() && between.isChecked())){
+                    person.setAge(Person.Age.more60);
+                }
                 Log.d("starting","you are in checked;");
-                //setContentView(R.layout.activity_myheart);
 
                 Intent lecture= new Intent(this, myheart.class);
-
-                person.setAge(Person.Age.LessThan40);
                 lecture.putExtra("FromNameToStarting", this.person);
                 startActivity(lecture);
 
