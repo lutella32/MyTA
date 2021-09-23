@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
       else{
            Log.d("start","you are in start");
            Intent lecture = new Intent(this, Starting.class);
-           lecture.putExtra("FromNametostarting", this.person);
+           lecture.putExtra("FromNameToStarting", this.person);
            startActivity(lecture);
          //  setContentView(R.layout.activity_starting);
       }

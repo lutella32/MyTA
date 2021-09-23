@@ -12,11 +12,17 @@ import android.widget.Toast;
 
 public class Starting extends AppCompatActivity {
 
+    private Person person;
+
+    public static final String TAG ="Starting";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        processIntentData();
         setContentView(R.layout.activity_starting);
     }
+
     public void goHeart(View view) {
         RadioButton radio1 = (RadioButton) findViewById(R.id.radioButton);
         RadioButton radio2 = (RadioButton) findViewById(R.id.radioButton2);
@@ -47,6 +53,23 @@ public class Starting extends AppCompatActivity {
                 startActivity(lecturechant);
             }
 
+        }
+    }
+
+    private void processIntentData(){
+        Intent intent = getIntent();
+        if(intent!=null){
+            Person transferredPerson = intent.getParcelableExtra("FromNameToStarting");
+            if (transferredPerson!=null){
+                this.person = transferredPerson;
+                this.person.print();
+            }
+            else{
+                Log.d(Starting.TAG, "No person found after transfer from main");
+            }
+        }
+        else{
+            Log.d(Starting.TAG, "Error when transferrinf from main");
         }
     }
 
