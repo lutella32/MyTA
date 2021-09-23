@@ -13,7 +13,6 @@ import android.widget.Toast;
 public class Starting extends AppCompatActivity {
 
     private Person person;
-
     public static final String TAG ="Starting";
 
     @Override

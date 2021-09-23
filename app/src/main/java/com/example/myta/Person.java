@@ -109,11 +109,11 @@ public class Person implements Parcelable {
     public Boolean getAppointment() { return appointment; }
     public void setAppointment(Boolean appointment) { this.appointment = appointment; }
 
-    @Override
+    @Override // Parcelable method
     public int describeContents() { return 0; }
 
-    @RequiresApi(api = Build.VERSION_CODES.Q)
-    @Override
+
+    @Override // Parcelable method
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.getName());
         dest.writeInt(this.getGenre().ordinal());
@@ -122,13 +122,17 @@ public class Person implements Parcelable {
         dest.writeInt(this.getParentPb().ordinal());
 
         //dest.writeBoolean() requires API 29
-/*        dest.writeBoolean(this.getCardiacDisease());
+        // If the error "current min is set to <Number lesser than 29>"
+        //=> Edit Gradle scripts -> build.gradle (Module: YourApp.app)
+        //==> change "minSdk <Number lesser than 29>" to "minSdk 29"
+        //(this SDK must be installed)
+        dest.writeBoolean(this.getCardiacDisease());
         dest.writeBoolean(this.getCholestPb());
         dest.writeBoolean(this.getDiab());
         dest.writeBoolean(this.getDoctor());
         dest.writeBoolean(this.getCheckpoint());
         dest.writeBoolean(this.getAppointment());
-        dest.writeBoolean(this.getHypertension());*/
+        dest.writeBoolean(this.getHypertension());
     }
 
     public static final Parcelable.Creator<Person> CREATOR
@@ -143,20 +147,20 @@ public class Person implements Parcelable {
         }
     };
 
-    @RequiresApi(api = Build.VERSION_CODES.Q)
     private Person(Parcel in) {
+        // Both reading and writing orderings must match (see writeToParcel method)
         this.setName(in.readString());
         this.setGenre(Genre.values()[in.readInt()]);
         this.setAge(Age.values()[in.readInt()]);
         this.setImc(Imc.values()[in.readInt()]);
         this.setParentPb(ParentPb.values()[in.readInt()]);
-/*        this.setCholestPb(in.readBoolean());
+        this.setCholestPb(in.readBoolean());
         this.setCardiacDisease(in.readBoolean());
         this.setDoctor(in.readBoolean());
         this.setDiab(in.readBoolean());
         this.setCheckpoint(in.readBoolean());
         this.setHypertension(in.readBoolean());
-        this.setAppointment(in.readBoolean());*/
+        this.setAppointment(in.readBoolean());
     }
 
 }
