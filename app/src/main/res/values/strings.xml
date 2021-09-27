@@ -13,4 +13,8 @@
     <string name="have_you_hypertension">Have you hypertension?</string>
     <string name="i_don_t_know">I don\'t know</string>
     <string name="have_you_a_cardiac_desease">Have you a cardiac desease?</string>
+    <string name="results">Results</string>
+    <string name="go_to_site">go to site</string>
+    <string name="resultats">Resultats</string>
+    <string name="result2">Result2</string>
 </resources>
