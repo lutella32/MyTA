@@ -27,7 +27,7 @@ public class Results extends AppCompatActivity {
                 if (false == person.getCheckpoint() | false == person.getDoctor() | false ==person.getAppointment()) {
 
                         TextView text1 = findViewById(R.id.textView12);
-                        text1.setText("you need to see a medecin to check your heart");
+                        text1.setText("you need to see a doctor to check your heart");
                     if (true == person.getDiab() | true == person.getCardiacDisease() | true == person.getHypertension() | true == person.getCholestPb() ) {
 
                         TextView text2 = findViewById(R.id.textView13);
