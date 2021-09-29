@@ -24,20 +24,6 @@ public class myheart extends AppCompatActivity {
         setContentView(R.layout.activity_myheart);
       // person = new Person();
 
-        Intent intent = getIntent();
-        if(intent != null) {
-            Person transferredPerson = intent.getParcelableExtra("FromNameToStarting");
-            if (transferredPerson != null) {
-                this.person = transferredPerson;
-                this.person.print();
-            }
-            else {
-                Log.d("Starting", "No Person found after transfer from Activity1");
-            }
-        }
-        else {
-            Log.d("starting", "Error when transferring from Activity1");
-        }
     }
 
     public void goSuivi(View view) {
@@ -121,7 +107,7 @@ public class myheart extends AppCompatActivity {
                                 if (button18.isChecked()){ person.setDiab(false); }
                                // person.print();
                                 Intent lecturechant = new Intent(this, Suivi.class);
-                                lecturechant.putExtra("FromStartingToHeart", this.person);
+                                lecturechant.putExtra("FromSmyHeratToSuivi", this.person);
                                 startActivity(lecturechant);
                             }
                             else{
@@ -155,7 +141,7 @@ public class myheart extends AppCompatActivity {
     private void processIntentData(){
         Intent intent = getIntent();
         if(intent!=null){
-            Person transferredPerson = intent.getParcelableExtra("FromNameToStarting");
+            Person transferredPerson = intent.getParcelableExtra("FromStartingTomyHeart");
             if (transferredPerson!=null){
                 this.person = transferredPerson;
                 this.person.print();

@@ -16,22 +16,10 @@ public class Suivi extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suivi);
+        processIntentData();
         person = new Person();
 
-        Intent intent = getIntent();
-        if(intent != null) {
-            Person transferredPerson = intent.getParcelableExtra("FromStartingToHeart");
-            if (transferredPerson != null) {
-                this.person = transferredPerson;
-                this.person.print();
-            }
-            else {
-                Log.d("Starting", "No Person found after transfer from Activity1");
-            }
-        }
-        else {
-            Log.d("starting", "Error when transferring from Activity1");
-        }
+
     }
     public void gofinish(View view) {
 
@@ -80,6 +68,23 @@ public class Suivi extends AppCompatActivity {
     }
     public void goBackHeart(View view) {
         onBackPressed();
+    }
+    private void processIntentData(){
+        Intent intent = getIntent();
+        if(intent!=null){
+            Person transferredPerson = intent.getParcelableExtra("FromSmyHeratToSuivi");
+            if (transferredPerson!=null){
+                this.person = transferredPerson;
+                this.person.print();
+                Log.d(Starting.TAG, "Personne ok");
+            }
+            else{
+                Log.d(Starting.TAG, "No person found after transfer from main");
+            }
+        }
+        else{
+            Log.d(Starting.TAG, "Error when transferrinf from main");
+        }
     }
 
 }

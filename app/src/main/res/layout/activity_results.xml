@@ -49,4 +49,29 @@
         android:text="@string/result2"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="232dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="140dp"
+        android:text="resultat"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.179" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="gotoIMC"
+        android:text="Know your IMC!"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
