@@ -22,20 +22,6 @@ public class Starting extends AppCompatActivity {
         setContentView(R.layout.activity_starting);
         person = new Person();
 
-        Intent intent = getIntent();
-        if(intent != null) {
-            Person transferredPerson = intent.getParcelableExtra("FromNameToStarting");
-            if (transferredPerson != null) {
-                this.person = transferredPerson;
-                this.person.print();
-            }
-            else {
-                Log.d("Starting", "No Person found after transfer from Activity1");
-            }
-        }
-        else {
-            Log.d("starting", "Error when transferring from Activity1");
-        }
 
     }
 
@@ -83,7 +69,7 @@ public class Starting extends AppCompatActivity {
                 Log.d("starting","you are in checked;");
 
                 Intent lecture= new Intent(this, myheart.class);
-                lecture.putExtra("FromNameToStarting", this.person);
+                lecture.putExtra("FromStartingTomyHeart", this.person);
                 startActivity(lecture);
 
             }
