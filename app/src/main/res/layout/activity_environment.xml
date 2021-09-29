@@ -23,8 +23,8 @@
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
         android:text="Have you got a sedentary work ?"
         android:textColor="#050505"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,7 @@
         android:layout_width="91dp"
         android:layout_height="82dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15">
 
@@ -56,18 +56,21 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:text="Do you do sport regularly ?"
         android:textColor="#050505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup9" />
 
     <RadioGroup
+        android:id="@+id/radioGroup10"
         android:layout_width="111dp"
         android:layout_height="82dp"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="218dp">
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16">
 
         <RadioButton
             android:id="@+id/radioButton29"
@@ -81,4 +84,87 @@
             android:layout_height="37dp"
             android:text="No" />
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="How many times a week ?"
+        android:textColor="#040202"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup10" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="111dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="3dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Do you smoke ?"
+        android:textColor="#040202"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="462dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup11"
+        android:layout_width="100dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18">
+
+        <RadioButton
+            android:id="@+id/radioButton26"
+            android:layout_width="81dp"
+            android:layout_height="37dp"
+            android:text="Yes" />
+
+        <RadioButton
+            android:id="@+id/radioButton31"
+            android:layout_width="78dp"
+            android:layout_height="34dp"
+            android:text="No" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/goResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:onClick="goToResult"
+        app:layout_constraintBottom_toBottomOf="@+id/perviousSuivi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/perviousSuivi"
+        app:layout_constraintTop_toTopOf="@+id/perviousSuivi" />
+
+    <Button
+        android:id="@+id/perviousSuivi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="64dp"
+        android:onClick="goBackSuivi"
+        android:text="Previous"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup11" />
 </androidx.constraintlayout.widget.ConstraintLayout>

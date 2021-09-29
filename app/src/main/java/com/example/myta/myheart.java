@@ -107,7 +107,7 @@ public class myheart extends AppCompatActivity {
                                 if (button18.isChecked()){ person.setDiab(false); }
                                // person.print();
                                 Intent lecturechant = new Intent(this, Suivi.class);
-                                lecturechant.putExtra("FromSmyHeratToSuivi", this.person);
+                                lecturechant.putExtra("FromSmyHeartToSuivi", this.person);
                                 startActivity(lecturechant);
                             }
                             else{

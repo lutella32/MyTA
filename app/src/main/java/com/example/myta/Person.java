@@ -20,7 +20,17 @@ public class Person implements Parcelable {
     private Age age;
     private Imc imc;
     private ParentPb parentPb;
-    private Boolean cardiacDisease, cholestPb, diab, hypertension, doctor, checkpoint, appointment;
+    private Integer howManySport;
+    private Boolean cardiacDisease;
+    private Boolean cholestPb;
+    private Boolean diab;
+    private Boolean hypertension;
+    private Boolean doctor;
+    private Boolean checkpoint;
+    private Boolean appointment;
+    private Boolean sendentary;
+    private Boolean sport;
+    private Boolean smoke ;
 
     public static final String DEFAULT_NAME="UNDIFINED";
 
@@ -37,6 +47,10 @@ public class Person implements Parcelable {
         this.setDoctor(false);
         this.setCheckpoint(false);
         this.setAppointment(false);
+        this.setSendentary(false);
+        this.setSport(false);
+        this.setHowManySport(0);
+        this.setSmoke(false);
     }
 
     @NonNull
@@ -53,6 +67,10 @@ public class Person implements Parcelable {
         sBuilder.append("\t Talking about your heart with a doctor: ").append(this.getDoctor()).append("\n");
         sBuilder.append("\t Heart checkpoint: ").append(this.getCheckpoint()).append("\n");
         sBuilder.append("\t Appointment with a cardioligist: ").append(this.getAppointment()).append("\n");
+        sBuilder.append("\t Sedentary work: ").append(this.getSendentary()).append("\n");
+        sBuilder.append("\t You do sport: ").append(this.getSport()).append("\n");
+        sBuilder.append("\t How many sport: ").append(this.getHowManySport()).append("\n");
+        sBuilder.append("\t Smoking: ").append(this.getSmoke()).append("\n");
         return sBuilder.toString();
     }
 
@@ -109,6 +127,19 @@ public class Person implements Parcelable {
     public Boolean getAppointment() { return appointment; }
     public void setAppointment(Boolean appointment) { this.appointment = appointment; }
 
+    public Boolean getSendentary() { return sendentary; }
+    public void setSendentary(Boolean sendentary) { this.sendentary = sendentary; }
+
+    public Boolean getSport() { return sport; }
+    public void setSport(Boolean sport) { this.sport = sport; }
+
+    public Integer getHowManySport() { return howManySport; }
+    public void setHowManySport(Integer howManySport) { this.howManySport = howManySport; }
+
+    public Boolean getSmoke() { return smoke; }
+    public void setSmoke(Boolean smoke) { this.smoke = smoke; }
+
+
     @Override // Parcelable method
     public int describeContents() { return 0; }
 
@@ -120,6 +151,7 @@ public class Person implements Parcelable {
         dest.writeInt(this.getAge().ordinal());
         dest.writeInt(this.getImc().ordinal());
         dest.writeInt(this.getParentPb().ordinal());
+        dest.writeInt(this.getHowManySport());
 
         //dest.writeBoolean() requires API 29
         // If the error "current min is set to <Number lesser than 29>"
@@ -133,6 +165,9 @@ public class Person implements Parcelable {
         dest.writeBoolean(this.getCheckpoint());
         dest.writeBoolean(this.getAppointment());
         dest.writeBoolean(this.getHypertension());
+        dest.writeBoolean(this.getSendentary());
+        dest.writeBoolean(this.getSport());
+        dest.writeBoolean(this.getSmoke());
     }
 
     public static final Parcelable.Creator<Person> CREATOR
@@ -161,6 +196,10 @@ public class Person implements Parcelable {
         this.setCheckpoint(in.readBoolean());
         this.setHypertension(in.readBoolean());
         this.setAppointment(in.readBoolean());
+        this.setHowManySport(in.readInt());
+        this.setSendentary(in.readBoolean());
+        this.setSmoke(in.readBoolean());
+        this.setSport(in.readBoolean());
     }
 
 }

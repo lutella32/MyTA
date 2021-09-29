@@ -20,7 +20,7 @@ public class Starting extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         processIntentData();
         setContentView(R.layout.activity_starting);
-        person = new Person();
+        //person = new Person();
 
 
     }

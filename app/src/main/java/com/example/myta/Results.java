@@ -20,7 +20,7 @@ public class Results extends AppCompatActivity {
         setContentView(R.layout.activity_results);
         Intent intent = getIntent();
         if(intent != null) {
-            Person transferredPerson = intent.getParcelableExtra("FromSuivitoResult");
+            Person transferredPerson = intent.getParcelableExtra("FromEnvtToResult");
             if (transferredPerson != null) {
                 this.person = transferredPerson;
                 this.person.print();

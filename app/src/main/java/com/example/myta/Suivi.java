@@ -17,7 +17,7 @@ public class Suivi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suivi);
         processIntentData();
-        person = new Person();
+        //person = new Person();
 
 
     }
@@ -50,8 +50,8 @@ public class Suivi extends AppCompatActivity {
                     if(radio11.isChecked()){ person.setDoctor(true);}
                     if(radio12.isChecked()){ person.setDoctor(false);}
                    // person.print();
-                    Intent lecturechant = new Intent(this, Results.class);
-                    lecturechant.putExtra("FromSuivitoResult", this.person);
+                    Intent lecturechant = new Intent(this, Environment.class);
+                    lecturechant.putExtra("FromSuivitoEnvt", this.person);
                     startActivity(lecturechant);
                 }
                 else{
@@ -72,7 +72,7 @@ public class Suivi extends AppCompatActivity {
     private void processIntentData(){
         Intent intent = getIntent();
         if(intent!=null){
-            Person transferredPerson = intent.getParcelableExtra("FromSmyHeratToSuivi");
+            Person transferredPerson = intent.getParcelableExtra("FromSmyHeartToSuivi");
             if (transferredPerson!=null){
                 this.person = transferredPerson;
                 this.person.print();
