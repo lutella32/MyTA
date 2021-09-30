@@ -33,8 +33,7 @@ public class Environment extends AppCompatActivity {
         RadioButton radio29 = (RadioButton) findViewById(R.id.radioButton29);
         RadioButton radio30 = (RadioButton) findViewById(R.id.radioButton30);
 
-        EditText number = (EditText) findViewById(R.id.editTextNumber);
-        //Integer newN = (Integer) Integer.parseInt(number.getText().toString());
+        EditText number = (EditText) findViewById(R.id.editTextNumber1);
 
         RadioButton radio26 = (RadioButton) findViewById(R.id.radioButton26);
         RadioButton radio31 = (RadioButton) findViewById(R.id.radioButton31);
@@ -49,28 +48,15 @@ public class Environment extends AppCompatActivity {
             if(radio27.isChecked()){ person.setSendentary(true);}
             if(radio28.isChecked()){ person.setSendentary(false);}
             if(radio29.isChecked() | radio30.isChecked()) {
-                if (radio29.isChecked()) {
-                    person.setSport(true);
+                if (radio29.isChecked()) { person.setSport(true); }
+                if (radio30.isChecked()) { person.setSport(false); }
+                if (number.getText().toString().equals("")) { toast.show(); }
+                else {
+                    person.setHowManySport(Integer.parseInt(number.getText().toString()));
                 }
-                if (radio30.isChecked()) {
-                    person.setSport(false);
-                }
-                if (!number.equals("")) {
-                    person.setHowManySport(6);
-                    if (radio26.isChecked() | radio31.isChecked()) {
-                        if (radio26.isChecked()) {
-                            person.setSmoke(true);
-                        }
-                        if (radio30.isChecked()) {
-                            person.setSmoke(false);
-                        }
-                        Intent lecturechant = new Intent(this, Results.class);
-                        lecturechant.putExtra("FromEnvtToResult", this.person);
-                        startActivity(lecturechant);
-                    }
-                    else {
-                        toast.show();
-                    }
+                if (radio26.isChecked() | radio31.isChecked()) {
+                    if (radio26.isChecked()) { person.setSmoke(true); }
+                    if (radio30.isChecked()) { person.setSmoke(false); }
                 }
                 else {
                     toast.show();
@@ -83,6 +69,10 @@ public class Environment extends AppCompatActivity {
         else {
             toast.show();
         }
+
+        Intent lecturechant = new Intent(this, Results.class);
+        lecturechant.putExtra("FromEnvtToResult", this.person);
+        startActivity(lecturechant);
 
     }
 

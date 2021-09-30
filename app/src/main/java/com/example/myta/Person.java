@@ -16,11 +16,12 @@ public class Person implements Parcelable {
     public enum ParentPb{yes, no, maybe};
 
     private String name;
+    private Integer howManySport;
     private Genre genre;
     private Age age;
     private Imc imc;
     private ParentPb parentPb;
-    private Integer howManySport;
+
     private Boolean cardiacDisease;
     private Boolean cholestPb;
     private Boolean diab;
@@ -33,6 +34,7 @@ public class Person implements Parcelable {
     private Boolean smoke ;
 
     public static final String DEFAULT_NAME="UNDIFINED";
+    //public static final String DEFAULT_NB="0";
 
     public Person(){
         this.setName(Person.DEFAULT_NAME);

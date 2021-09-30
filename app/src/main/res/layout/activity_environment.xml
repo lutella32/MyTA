@@ -97,7 +97,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup10" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/editTextNumber1"
         android:layout_width="111dp"
         android:layout_height="40dp"
         android:layout_marginStart="40dp"
@@ -116,7 +116,7 @@
         android:text="Do you smoke ?"
         android:textColor="#040202"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber1" />
 
     <RadioGroup
         android:layout_width="wrap_content"
