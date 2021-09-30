@@ -15,6 +15,33 @@
     <string name="have_you_a_cardiac_desease">Have you a cardiac desease?</string>
     <string name="results">Results</string>
     <string name="go_to_site">go to site</string>
-    <string name="resultats">Resultats</string>
-    <string name="result2">Result2</string>
+    <string name="resultats">Results</string>
+    <string name="result2" translatable="false">Result2</string>
+    <string name="mon_suivi_cardiaque">mon_suivi_cardiaque</string>
+    <string name="have_you_ever_talked_about_your_heart_with_your_doctor">Have you ever talked about your heart with your doctor ?</string>
+    <string name="Next">Next</string>
+    <string name="have_you_ever_did_a_heart_checkpoint">Have you ever did a heart checkpoint ?</string>
+    <string name="have_you_ever_had_an_appointment_with_a_cardiologist">Have you ever had an appointment with a cardiologist ?</string>
+    <string name="advice">Advice</string>
+    <string name="second_advice">Second Advice</string>
+    <string name="first_advice">First Advice</string>
+    <string name="calcul_your_imc">Calcul your IMC</string>
+    <string name="size_in_cm">Size in cm</string>
+    <string name="weight_in_kg">Weight in kg</string>
+    <string name="textview" translatable="false">TextView</string>
+    <string name="resultat" translatable="false">resultat</string>
+    <string name="about_your_heart">About your heart :</string>
+    <string name="your_heart_checkup">Your heart checkup :</string>
+    <string name="about_your_environment">About your environment :</string>
+    <string name="more_advices">More advices ?</string>
+    <string name="start_test">Start test</string>
+    <string name="your_name">Your name</string>
+    <string name="to_do">To Do</string>
+    <string name="your_environment">Your environment</string>
+    <string name="have_you_got_a_sedentary_work">Have you got a sedentary work ?</string>
+    <string name="do_you_do_sport_regularly">Do you do sport regularly ?</string>
+    <string name="how_many_times_a_week">How many times a week ?</string>
+    <string name="do_you_smoke">Do you smoke ?</string>
+    <string name="i_dont_know">I don t know</string>
+    <string name="to__do" translatable="false">to do</string>
 </resources>

@@ -10,13 +10,12 @@
     <TextView
         android:id="@+id/textView11"
         android:layout_width="76dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="31dp"
         android:text="@string/results"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
@@ -58,7 +57,7 @@
         android:layout_width="309dp"
         android:layout_height="21dp"
         android:layout_marginTop="16dp"
-        android:text="resultat"
+        android:text="@string/resultat"
         app:layout_constraintEnd_toEndOf="@+id/textView13"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView13"
@@ -71,7 +70,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="13dp"
         android:onClick="gotoAdvice"
-        android:text="More advices ?"
+        android:text="@string/more_advices"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
@@ -83,10 +82,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:background="#EC6C6C"
-        android:text="About your heart :"
+        android:text="@string/about_your_heart"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/textView20"
@@ -95,10 +95,11 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="18dp"
         android:background="#C465B3BA"
-        android:text="Your heart checkup : "
+        android:text="@string/your_heart_checkup"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/textView19"
-        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+        app:layout_constraintTop_toBottomOf="@+id/textView27"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/textView21"
@@ -106,17 +107,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:background="#BF6ED380"
-        android:text="About your environment :"
+        android:text="@string/about_your_environment"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/textView20"
-        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+        app:layout_constraintTop_toBottomOf="@+id/textView28"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/textView22"
         android:layout_width="148dp"
         android:layout_height="46dp"
         android:layout_marginTop="4dp"
-        android:text="Your name"
+        android:text="@string/your_name"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -129,7 +131,7 @@
         android:layout_width="309dp"
         android:layout_height="21dp"
         android:layout_marginTop="4dp"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
@@ -139,7 +141,7 @@
         android:layout_width="309dp"
         android:layout_height="21dp"
         android:layout_marginTop="4dp"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView23" />
@@ -149,7 +151,7 @@
         android:layout_width="309dp"
         android:layout_height="21dp"
         android:layout_marginTop="3dp"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
@@ -159,7 +161,7 @@
         android:layout_width="309dp"
         android:layout_height="21dp"
         android:layout_marginTop="4dp"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
@@ -168,7 +170,7 @@
         android:id="@+id/textView27"
         android:layout_width="309dp"
         android:layout_height="21dp"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView26" />
@@ -177,7 +179,7 @@
         android:id="@+id/textView28"
         android:layout_width="309sp"
         android:layout_height="21sp"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -186,7 +188,7 @@
         android:id="@+id/textView29"
         android:layout_width="309sp"
         android:layout_height="21sp"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView28" />
@@ -195,7 +197,7 @@
         android:id="@+id/textView30"
         android:layout_width="309sp"
         android:layout_height="21sp"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -205,7 +207,7 @@
         android:layout_width="309sp"
         android:layout_height="21sp"
         android:layout_marginTop="1dp"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView30" />
@@ -214,7 +216,7 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Previous"
+        android:text="@string/previous"
         android:onClick="goBackEnvt"
         app:layout_constraintBottom_toBottomOf="@+id/button2"
         app:layout_constraintEnd_toStartOf="@+id/button2"
