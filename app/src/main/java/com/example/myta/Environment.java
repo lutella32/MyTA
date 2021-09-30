@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Environment extends AppCompatActivity {
@@ -32,8 +33,9 @@ public class Environment extends AppCompatActivity {
 
         RadioButton radio29 = (RadioButton) findViewById(R.id.radioButton29);
         RadioButton radio30 = (RadioButton) findViewById(R.id.radioButton30);
-
+        TextView text17 = findViewById(R.id.textView17);
         EditText number = (EditText) findViewById(R.id.editTextNumber1);
+        Log.d("tecte number", number.getText().toString());
 
         RadioButton radio26 = (RadioButton) findViewById(R.id.radioButton26);
         RadioButton radio31 = (RadioButton) findViewById(R.id.radioButton31);
@@ -48,15 +50,20 @@ public class Environment extends AppCompatActivity {
             if(radio27.isChecked()){ person.setSendentary(true);}
             if(radio28.isChecked()){ person.setSendentary(false);}
             if(radio29.isChecked() | radio30.isChecked()) {
-                if (radio29.isChecked()) { person.setSport(true); }
-                if (radio30.isChecked()) { person.setSport(false); }
-                if (number.getText().toString().equals("")) { toast.show(); }
-                else {
-                    person.setHowManySport(Integer.parseInt(number.getText().toString()));
+                if (radio29.isChecked()) { person.setSport(true);
+
+                    if (number.getText().toString().equals("")) { toast.show(); }
+                    else {
+                        Integer n=Integer.parseInt(number.getText().toString());
+
+                        person.setHowManySport(n);
+                    }
                 }
+                if (radio30.isChecked()) { person.setSport(false); }
+
                 if (radio26.isChecked() | radio31.isChecked()) {
                     if (radio26.isChecked()) { person.setSmoke(true); }
-                    if (radio30.isChecked()) { person.setSmoke(false); }
+                    if (radio31.isChecked()) { person.setSmoke(false); }
                 }
                 else {
                     toast.show();

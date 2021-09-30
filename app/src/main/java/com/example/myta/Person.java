@@ -3,6 +3,8 @@ package com.example.myta;
 import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
@@ -136,7 +138,8 @@ public class Person implements Parcelable {
     public void setSport(Boolean sport) { this.sport = sport; }
 
     public Integer getHowManySport() { return howManySport; }
-    public void setHowManySport(Integer howManySport) { this.howManySport = howManySport; }
+    public void setHowManySport(Integer howManySport) {
+    this.howManySport = howManySport; }
 
     public Boolean getSmoke() { return smoke; }
     public void setSmoke(Boolean smoke) { this.smoke = smoke; }
@@ -191,6 +194,7 @@ public class Person implements Parcelable {
         this.setAge(Age.values()[in.readInt()]);
         this.setImc(Imc.values()[in.readInt()]);
         this.setParentPb(ParentPb.values()[in.readInt()]);
+        this.setHowManySport(in.readInt());
         this.setCholestPb(in.readBoolean());
         this.setCardiacDisease(in.readBoolean());
         this.setDoctor(in.readBoolean());
@@ -198,7 +202,7 @@ public class Person implements Parcelable {
         this.setCheckpoint(in.readBoolean());
         this.setHypertension(in.readBoolean());
         this.setAppointment(in.readBoolean());
-        this.setHowManySport(in.readInt());
+
         this.setSendentary(in.readBoolean());
         this.setSmoke(in.readBoolean());
         this.setSport(in.readBoolean());

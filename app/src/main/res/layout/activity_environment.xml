@@ -43,12 +43,13 @@
             android:id="@+id/radioButton27"
             android:layout_width="73dp"
             android:layout_height="36dp"
-            android:text="Yes" />
+            android:text="Yes"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <RadioButton
             android:id="@+id/radioButton28"
             android:layout_width="75dp"
-            android:layout_height="36dp"
+            android:layout_height="48dp"
             android:text="No" />
     </RadioGroup>
 
@@ -75,13 +76,13 @@
         <RadioButton
             android:id="@+id/radioButton29"
             android:layout_width="92dp"
-            android:layout_height="35dp"
+            android:layout_height="48dp"
             android:text="Yes" />
 
         <RadioButton
             android:id="@+id/radioButton30"
             android:layout_width="91dp"
-            android:layout_height="37dp"
+            android:layout_height="48dp"
             android:text="No" />
     </RadioGroup>
 
@@ -99,13 +100,14 @@
     <EditText
         android:id="@+id/editTextNumber1"
         android:layout_width="111dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="3dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView18"
@@ -117,12 +119,6 @@
         android:textColor="#040202"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber1" />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="462dp" />
 
     <RadioGroup
         android:id="@+id/radioGroup11"
@@ -142,7 +138,7 @@
         <RadioButton
             android:id="@+id/radioButton31"
             android:layout_width="78dp"
-            android:layout_height="34dp"
+            android:layout_height="48dp"
             android:text="No" />
     </RadioGroup>
 
