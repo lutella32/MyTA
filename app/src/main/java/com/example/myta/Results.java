@@ -172,7 +172,8 @@ public class Results extends AppCompatActivity {
         startActivity(intent);
     }
     public void gotoAdvice(View view) {
-        Intent lecturechant = new Intent(this, Results.class);
+
+        Intent lecturechant = new Intent(this, Advice.class);
         lecturechant.putExtra("FromResultToAdvice", this.person);
         startActivity(lecturechant);
 /*        String url = "https://www.imc.fr/";

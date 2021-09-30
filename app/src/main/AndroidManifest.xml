@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTA">
         <activity
+            android:name=".Advice"
+            android:exported="true" />
+        <activity
             android:name=".Environment"
             android:exported="true" />
         <activity
