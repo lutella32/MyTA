@@ -29,6 +29,8 @@ public class Advice extends AppCompatActivity {
         setContentView(R.layout.activity_advice2);
         processIntentData();
 
+        afficheInformation(person);
+
         Context context = getApplicationContext();
         CharSequence textToast = "You need to enter a weight and a size";
         int duration = Toast.LENGTH_SHORT;
@@ -40,8 +42,15 @@ public class Advice extends AppCompatActivity {
         edit2.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View view, int i, KeyEvent keyEvent) {
-                Integer n=Integer.parseInt(edit2.getText().toString());
-                if(!edit.getText().toString().equals("") & n>10) {
+                Editable nkey = edit.getText();
+               String nskey = nkey.toString();
+               Double dpoidskey = Double.parseDouble(nskey);
+                Log.d("test","avant if");
+                //Integer n=Integer.parseInt(edit2.getText().toString());
+                if(!edit.getText().toString().equals("") & !edit2.getText().toString().equals("")){
+
+
+                    Log.d("test","dans if");
                     Calcul(view);
 
                 }
@@ -51,21 +60,21 @@ public class Advice extends AppCompatActivity {
                 return false;
             }
         });
-        edit.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View view, int i, KeyEvent keyEvent) {
-                Integer n=Integer.parseInt(edit.getText().toString());
-                if(!edit2.getText().toString().equals("") & n>=100) {
-                    Calcul(view);
+//        edit.setOnKeyListener(new View.OnKeyListener() {
+//            @Override
+//            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+//
+//                if(!edit2.getText().toString().equals("") & !edit.getText().toString().equals("")) {
+//                    Calcul(view);
+//
+//                }
+//                else{
+//                    toast.show();
+//                }
+//                return false;
+//            }
+//        });
 
-                }
-                else{
-                    toast.show();
-                }
-                return false;
-            }
-        });
-        //setContentView(R.layout.activity_advice2);
 
 
 
@@ -73,31 +82,84 @@ public class Advice extends AppCompatActivity {
     }
     public void Calcul(View view){
         text31 = findViewById(R.id.textView31);
+        Log.d("method calcul","debut");
         edit = findViewById(R.id.editTextNumberSigned);
-        edit2 = findViewById(R.id.editTextNumberSigned2);
+        String taille="";
         Editable n = edit.getText();
+        taille = n.toString();
+        Double dtaille = 0.0;
+        dtaille= Double.parseDouble(taille);
+
+        edit2 = findViewById(R.id.editTextNumberSigned2);
+        String poids="";
         Editable n2 = edit2.getText();
-        String taille = n.toString();
+        poids = n2.toString();
+        Double dpoids =0.0;
+        dpoids=Double.parseDouble(poids);
 
-        String poids = n2.toString();
-        Double dtaille = Double.parseDouble(taille);
-        Double dpoids = Double.parseDouble(poids);
-        Double IMC = (((dpoids/(dtaille*dtaille)))*10000);
-        Integer IMCFINAL = IMC.intValue();
-        String IMCF = String.valueOf(IMCFINAL);
+        String IMCF="";
+        Double IMC=0.0;
+        Log.d("method calcul","milieu");
+        Integer IMCFINAL=0;
+
+
+        IMC = (((dpoids/(dtaille*dtaille)))*10000);
+        IMCFINAL = IMC.intValue();
+        // IMCFINAL=30;
+        IMCF = String.valueOf(IMCFINAL);
+
+        Log.d("method calcul","milieu2");
         if (IMCFINAL<=18) {
-            text31.setText(IMCF+"you are too thin");
+            text31.setText(IMCF+" you are too thin");
         }
-        if (IMCFINAL>=18 & IMCFINAL<=25) {
-            text31.setText(IMCF+"you are GOOD");
+        if (IMCFINAL>18 & IMCFINAL<=25) {
+            text31.setText(IMCF+" you are GOOD");
         }
-        if (IMCFINAL>=25 & IMCFINAL<=30) {
-            text31.setText(IMCF+"you are overweight");
+        if (IMCFINAL>25 & IMCFINAL<=30) {
+            text31.setText(IMCF+" you are overweight");
         }
-        else{
-            text31.setText(IMCF+"you are in obesity");
+        if (IMCFINAL>30) {
+            text31.setText(IMCF+" you are in obesity");
 
         }
+        Log.d("method calcul","fin");
+
+    }
+    public void afficheInformation(Person person){
+                        TextView text1=findViewById(R.id.textView27);
+                        TextView text2=findViewById(R.id.textView28);
+                        if (false == person.getCheckpoint() & false == person.getDoctor() & false == person.getAppointment()) {
+
+                            text1.setText("You need to see a doctor to check your heart");
+
+                                    if (true == person.getDiab() | true == person.getCardiacDisease() | true == person.getHypertension() | true == person.getCholestPb()  | person.getParentPb().equals(Person.ParentPb.yes)){
+                                        if(false==person.getSport()) {  text2.setText("You need to see a keep a healthy life style and do some sport");  }
+
+                                        text2.setText("You need to see a keep a healthy life style");
+                                        if(true==person.getSmoke()){
+                                            text2.setText("You need to see a keep a healthy life style and do some sport. More you need to stop smoke, called : 3989");}
+                                    }
+
+                        } else {
+
+                            if (true == person.getCheckpoint() | true == person.getDoctor() | true == person.getAppointment()){
+                                text1.setText("you see often your doctor, think do to sport");
+                                if(true==person.getSport() & false==person.getSmoke()){text1.setText("you see often your doctor, and do sport it's good!");}
+
+
+                                if (false == person.getDiab() | false == person.getCardiacDisease() | false == person.getHypertension() | false == person.getCholestPb()) {
+
+
+                                    text2.setText("you need to see a keep a healthy life style");
+                                    if(person.getParentPb().equals(Person.ParentPb.no) | person.getParentPb().equals(Person.ParentPb.yes)){
+                                        text2.setText("you need to see a keep a healthy life style, and talk with your family");
+                                    }
+
+                                }
+                            }
+                        }
+
+
 
     }
     private void processIntentData(){
@@ -132,4 +194,5 @@ public class Advice extends AppCompatActivity {
             Log.d("starting", "Error when transferring from Activity1");
         }
     }
+    public void goBackStart(View view) { onBackPressed(); }
 }
