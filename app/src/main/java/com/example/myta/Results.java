@@ -34,8 +34,50 @@ public class Results extends AppCompatActivity {
                 if (person.getCardiacDisease()==false){ CD.setText("Cardiac disease : no"); }
 
                 TextView Ch = findViewById(R.id.textView23);
-                if (person.getCardiacDisease()==true){ Ch.setText("Cholesterol problem : yes"); }
-                if (person.getCardiacDisease()==false){ Ch.setText("Cholesterol problem : no"); }
+                if (person.getCholestPb()==true){ Ch.setText("Cholesterol problem : yes"); }
+                if (person.getCholestPb()==false){ Ch.setText("Cholesterol problem : no"); }
+
+                TextView D = findViewById(R.id.textView24);
+                if (person.getDiab()==true){ D.setText("Diabete : yes"); }
+                if (person.getDiab()==false){ D.setText("Diabete : no"); }
+
+                TextView H = findViewById(R.id.textView25);
+                if (person.getHypertension()==true){ H.setText("Hypertension : yes"); }
+                if (person.getHypertension()==false){ H.setText("Hypertension : no"); }
+
+                TextView PCD = findViewById(R.id.textView26);
+                if (person.getParentPb().equals(Person.ParentPb.yes)){ PCD.setText("Parent with cardiac problem : yes"); }
+                if (person.getParentPb().equals(Person.ParentPb.no)){ PCD.setText("Parent with cardiac problem  : no"); }
+                if (person.getParentPb().equals(Person.ParentPb.maybe)){ PCD.setText("Parent with cardiac problem  : maybe"); }
+
+                TextView IMC = findViewById(R.id.textView27);
+                if (person.getImc().equals(Person.Imc.yes)){ IMC.setText("IMC known : yes"); }
+                if (person.getImc().equals(Person.Imc.no)){ IMC.setText("IMC known : no"); }
+                if (person.getImc().equals(Person.Imc.IDontKnow)){ IMC.setText("IMC known : I don't know"); }
+
+                TextView Doc = findViewById(R.id.textView13);
+                if (person.getDoctor()==true){ Doc.setText("You talked abour heart with your doctor : yes"); }
+                if (person.getDoctor()==false){ Doc.setText("You talked abour heart with your doctor : no"); }
+
+                TextView check = findViewById(R.id.textView28);
+                if (person.getCheckpoint()==true){ check.setText("Heart checkpoint : yes"); }
+                if (person.getCheckpoint()==false){ check.setText("Heart checkpoint : no"); }
+
+                TextView cardio = findViewById(R.id.textView29);
+                if (person.getAppointment()==true){ cardio.setText("Appointment with a cardiologist : yes"); }
+                if (person.getAppointment()==false){ cardio.setText("Appointment with a cardiologist : no"); }
+
+                TextView Sed = findViewById(R.id.textView14);
+                if (person.getSendentary()==true){ Sed.setText("Sedentary work : yes"); }
+                if (person.getSendentary()==false){ Sed.setText("Sedentary work : no"); }
+
+                TextView sp = findViewById(R.id.textView30);
+                if (person.getCheckpoint()==true){ sp.setText("Doing sport regularly : yes"); }
+                if (person.getCheckpoint()==false){ sp.setText("Doing sport regularly : no"); }
+
+                TextView sm = findViewById(R.id.textView31);
+                if (person.getAppointment()==true){ sm.setText("Smoking : yes"); }
+                if (person.getAppointment()==false){ sm.setText("Smoking : no"); }
 
                /* if (person.getAge().equals(Person.Age.more60) | person.getAge().equals(Person.Age.between40and60)) {
                         if (false == person.getCheckpoint() | false == person.getDoctor() | false == person.getAppointment()) {
@@ -129,11 +171,17 @@ public class Results extends AppCompatActivity {
         intent.setData(Uri.parse(url));
         startActivity(intent);
     }
-    public void gotoIMC(View view) {
-        String url = "https://www.imc.fr/";
+    public void gotoAdvice(View view) {
+        Intent lecturechant = new Intent(this, Results.class);
+        lecturechant.putExtra("FromResultToAdvice", this.person);
+        startActivity(lecturechant);
+/*        String url = "https://www.imc.fr/";
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(url));
-        startActivity(intent);
+        startActivity(intent);*/
+    }
+    public void goBackEnvt(View view){
+        onBackPressed();
     }
 
 }
