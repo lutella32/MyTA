@@ -136,7 +136,11 @@ public class myheart extends AppCompatActivity {
 
     }
 
-    public void goBackStart(View view) { onBackPressed();
+    public void goBackStart(View view) {
+//        Intent lecturechant = new Intent(this, Starting.class);
+//        lecturechant.putExtra("FromSmyHeartToSuivi", this.person);
+//        startActivity(lecturechant);
+        onBackPressed();
 
     }
 

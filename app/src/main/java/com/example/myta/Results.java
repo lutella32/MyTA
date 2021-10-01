@@ -132,5 +132,10 @@ public class Results extends AppCompatActivity {
         onBackPressed();
     }
 
-    public void finishing(View view) { finish(); }
+    public void finishing(View view) {
+
+        finishAffinity();
+        System.exit(0);
+       // android.os.Process.killProcess(android.os.Process.myPid());
+        }
 }
