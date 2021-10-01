@@ -139,20 +139,6 @@
         app:layout_constraintTop_toTopOf="@+id/textView9"
         app:layout_constraintVertical_bias="0.368" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="139dp"
-        android:layout_height="64dp"
-        android:contentDescription="@string/to__do"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/capture"
-        tools:ignore="ImageContrastCheck" />
-
     <Button
         android:id="@+id/gobackS"
         android:layout_width="115dp"
@@ -295,5 +281,32 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup6"
         app:layout_constraintVertical_bias="0.298"
         tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="61dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/heart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/capture_d_cran_2021_10_01_071550" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="92dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/my_heart"
+        android:textColor="#050404"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintHorizontal_bias="0.006"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.562" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

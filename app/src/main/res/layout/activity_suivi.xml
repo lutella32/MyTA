@@ -8,28 +8,16 @@
     tools:context=".Suivi">
 
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="214dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:contentDescription="@string/mon_suivi_cardiaque"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/suivi"
-            tools:ignore="ImageContrastCheck" />
-
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="20dp"
             android:text="@string/have_you_ever_talked_about_your_heart_with_your_doctor"
             android:textColor="#040303"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
             tools:ignore="TextContrastCheck" />
 
         <TextView
@@ -91,22 +79,6 @@
             app:layout_constraintStart_toStartOf="@+id/radioGroup13"
             app:layout_constraintTop_toBottomOf="@+id/textView10">
 
-                <RadioButton
-                    android:id="@+id/radioButton24"
-                    android:layout_width="70dp"
-                    android:layout_height="53dp"
-                    android:buttonTint="#040404"
-                    android:text="@string/yes"
-                    android:textColor="#050505"
-                    tools:ignore="DuplicateSpeakableTextCheck" />
-
-                <RadioButton
-                    android:id="@+id/radioButton25"
-                    android:layout_width="88dp"
-                    android:layout_height="52dp"
-                    android:buttonTint="#040404"
-                    android:text="@string/no"
-                    tools:ignore="DuplicateSpeakableTextCheck" />
         </RadioGroup>
 
         <RadioGroup
@@ -116,24 +88,26 @@
             android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@+id/textView10"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.403"
+            app:layout_constraintHorizontal_bias="0.395"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8"
-            app:layout_constraintVertical_bias="0.008">
+            app:layout_constraintVertical_bias="0.0">
 
                 <RadioButton
                     android:id="@+id/radioButton14"
                     android:layout_width="73dp"
                     android:layout_height="match_parent"
                     android:buttonTint="#040404"
-                    android:text="@string/yes" />
+                    android:text="@string/yes"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
 
                 <RadioButton
                     android:id="@+id/radioButton15"
                     android:layout_width="84dp"
                     android:layout_height="wrap_content"
                     android:buttonTint="#040404"
-                    android:text="@string/no" />
+                    android:text="@string/no"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
         </RadioGroup>
 
         <RadioGroup
@@ -159,6 +133,57 @@
                     android:id="@+id/radioButton12"
                     android:layout_width="93dp"
                     android:layout_height="wrap_content"
+                    android:buttonTint="#040404"
+                    android:text="@string/no"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="61dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/suivi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/capture_d_cran_2021_10_01_071617"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:text="@string/my_heart_follow_up"
+            android:textColor="#040101"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <RadioGroup
+            android:layout_width="158dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/radioGroup13"
+            app:layout_constraintStart_toStartOf="@+id/radioGroup13"
+            app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+                <RadioButton
+                    android:id="@+id/radioButton24"
+                    android:layout_width="72dp"
+                    android:layout_height="53dp"
+                    android:buttonTint="#040404"
+                    android:text="@string/yes"
+                    android:textColor="#050505"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <RadioButton
+                    android:id="@+id/radioButton25"
+                    android:layout_width="79dp"
+                    android:layout_height="48dp"
                     android:buttonTint="#040404"
                     android:text="@string/no"
                     tools:ignore="DuplicateSpeakableTextCheck" />

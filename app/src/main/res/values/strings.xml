@@ -44,4 +44,18 @@
     <string name="do_you_smoke">Do you smoke ?</string>
     <string name="i_dont_know">I don t know</string>
     <string name="to__do" translatable="false">to do</string>
+    <string name="how_is_my_heart">How is my heart ?</string>
+    <string name="my_heart_follow_up">My heart follow-up</string>
+    <string name="suivi">Follow-up</string>
+    <string name="my_heart">My heart</string>
+    <string name="heart">heart</string>
+    <string name="how_old_are_you">How old are you ?</string>
+    <string name="you_are">You are...</string>
+    <string name="less_than_40">Less than 40</string>
+    <string name="between_40_and_60">Between 40 and 60</string>
+    <string name="more_than_60">More than 60</string>
+    <string name="man">man</string>
+    <string name="woman">woman</string>
+    <string name="about_me">About me</string>
+    <string name="profil">profil</string>
 </resources>
