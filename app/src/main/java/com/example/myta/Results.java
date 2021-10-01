@@ -132,4 +132,5 @@ public class Results extends AppCompatActivity {
         onBackPressed();
     }
 
+    public void finishing(View view) { finish(); }
 }
