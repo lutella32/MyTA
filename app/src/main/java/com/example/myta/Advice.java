@@ -125,12 +125,16 @@ public class Advice extends AppCompatActivity {
 
                             text1.setText("You need to see a doctor to check your heart");
 
+
                                     if (true == person.getDiab() | true == person.getCardiacDisease() | true == person.getHypertension() | true == person.getCholestPb()  | person.getParentPb().equals(Person.ParentPb.yes)){
                                         if(false==person.getSport()) {  text2.setText("You need to see a keep a healthy life style and do some sport");  }
 
                                         text2.setText("You need to see a keep a healthy life style");
                                         if(true==person.getSmoke()){
                                             text2.setText("You need to see a keep a healthy life style and do some sport. More you need to stop smoke, called : 3989");}
+                                    }
+                                    else {
+                                        text2.setText("Maube you can do a ckeckpoint of heart enven if you don't have predisposition ");
                                     }
 
                         } else {
@@ -169,14 +173,14 @@ public class Advice extends AppCompatActivity {
                     text31 = findViewById(R.id.textView31);
                     edit = findViewById(R.id.editTextNumberSigned);
                     edit2 = findViewById(R.id.editTextNumberSigned2);
-                    calcul = findViewById(R.id.button4);
+
                     text29.setVisibility(View.INVISIBLE);
                   text30.setVisibility(View.INVISIBLE);
                 text32.setVisibility(View.INVISIBLE);
                    text31.setVisibility(View.INVISIBLE);
                    edit.setVisibility(View.INVISIBLE);
                         edit2.setVisibility(View.INVISIBLE);
-                  calcul.setVisibility(View.INVISIBLE);
+
                }
             }
             else {

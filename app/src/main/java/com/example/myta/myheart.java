@@ -136,7 +136,9 @@ public class myheart extends AppCompatActivity {
 
     }
 
-    public void goBackStart(View view) { onBackPressed(); }
+    public void goBackStart(View view) { onBackPressed();
+
+    }
 
     private void processIntentData(){
         Intent intent = getIntent();
