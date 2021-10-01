@@ -42,9 +42,7 @@ public class Advice extends AppCompatActivity {
         edit2.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View view, int i, KeyEvent keyEvent) {
-                Editable nkey = edit.getText();
-               String nskey = nkey.toString();
-               Double dpoidskey = Double.parseDouble(nskey);
+
                 Log.d("test","avant if");
                 //Integer n=Integer.parseInt(edit2.getText().toString());
                 if(!edit.getText().toString().equals("") & !edit2.getText().toString().equals("")){
@@ -60,23 +58,18 @@ public class Advice extends AppCompatActivity {
                 return false;
             }
         });
-//        edit.setOnKeyListener(new View.OnKeyListener() {
-//            @Override
-//            public boolean onKey(View view, int i, KeyEvent keyEvent) {
-//
-//                if(!edit2.getText().toString().equals("") & !edit.getText().toString().equals("")) {
-//                    Calcul(view);
-//
-//                }
-//                else{
-//                    toast.show();
-//                }
-//                return false;
-//            }
-//        });
-
-
-
+        edit = findViewById(R.id.editTextNumberSigned);
+        edit2 = findViewById(R.id.editTextNumberSigned2);
+        edit.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+                    if(!edit2.getText().toString().equals("")){
+                        Log.d("test dans edit","dans if");
+                        Calcul(view);
+                    }
+                return false;
+            }
+        });
 
 
     }
