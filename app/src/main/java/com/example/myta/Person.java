@@ -39,6 +39,7 @@ public class Person implements Parcelable {
     //public static final String DEFAULT_NB="0";
 
     public Person(){
+
         this.setName(Person.DEFAULT_NAME);
         this.setGenre(Genre.undifined);
         this.setAge(Age.LessThan40);
@@ -46,15 +47,15 @@ public class Person implements Parcelable {
         this.setParentPb(ParentPb.maybe);
         this.setCardiacDisease(false);
         this.setCholestPb(false);
-        this.setDiab(false);
-        this.setHypertension(false);
+        this.setDiabet(true);
+        this.setHypertension(true);
         this.setDoctor(false);
         this.setCheckpoint(false);
         this.setAppointment(false);
         this.setSendentary(false);
         this.setSport(false);
         this.setHowManySport(0);
-        this.setSmoke(false);
+        this.setSmoke(true);
     }
 
     @NonNull
@@ -113,7 +114,7 @@ public class Person implements Parcelable {
 
     //Getter setter diabete
     public Boolean getDiab() { return diab; }
-    public void setDiab(Boolean diab) { this.diab = diab;  }
+    public void setDiabet(Boolean diab) { this.diab = diab;  }
 
     //Getter setter hypertension
     public Boolean getHypertension() { return hypertension; }
@@ -166,10 +167,10 @@ public class Person implements Parcelable {
         dest.writeBoolean(this.getCardiacDisease());
         dest.writeBoolean(this.getCholestPb());
         dest.writeBoolean(this.getDiab());
+        dest.writeBoolean(this.getHypertension());
         dest.writeBoolean(this.getDoctor());
         dest.writeBoolean(this.getCheckpoint());
         dest.writeBoolean(this.getAppointment());
-        dest.writeBoolean(this.getHypertension());
         dest.writeBoolean(this.getSendentary());
         dest.writeBoolean(this.getSport());
         dest.writeBoolean(this.getSmoke());
@@ -197,15 +198,14 @@ public class Person implements Parcelable {
         this.setHowManySport(in.readInt());
         this.setCholestPb(in.readBoolean());
         this.setCardiacDisease(in.readBoolean());
-        this.setDoctor(in.readBoolean());
-        this.setDiab(in.readBoolean());
-        this.setCheckpoint(in.readBoolean());
+        this.setDiabet(in.readBoolean());
         this.setHypertension(in.readBoolean());
+        this.setDoctor(in.readBoolean());
+        this.setCheckpoint(in.readBoolean());
         this.setAppointment(in.readBoolean());
-
         this.setSendentary(in.readBoolean());
-        this.setSmoke(in.readBoolean());
         this.setSport(in.readBoolean());
+        this.setSmoke(in.readBoolean());
     }
 
 }

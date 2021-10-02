@@ -20,6 +20,7 @@ public class Environment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        person = new Person();
         processIntentData();
         setContentView(R.layout.activity_environment);
     }
@@ -47,24 +48,38 @@ public class Environment extends AppCompatActivity {
         Toast toast = Toast.makeText(context, textToast, duration);
 
         if(radio27.isChecked() | radio28.isChecked()) {
-            if(radio27.isChecked()){ person.setSendentary(true);}
-            if(radio28.isChecked()){ person.setSendentary(false);}
-            if(radio29.isChecked() | radio30.isChecked()) {
-                if (radio29.isChecked()) { person.setSport(true);
+                        if(radio27.isChecked()){ person.setSendentary(true);}
+                        if(radio28.isChecked()){ person.setSendentary(false);}
+                        if (radio26.isChecked() | radio31.isChecked()) {
+                                 if (radio26.isChecked()) { person.setSmoke(true); }else{person.setSmoke(false);}
+                                 if(radio31.isChecked()){person.setSmoke(false);}
+                                 if(radio29.isChecked() | radio30.isChecked()) {
+                                             if (radio29.isChecked() ) {
 
-                    if (number.getText().toString().equals("")) { toast.show(); }
-                    else {
-                        Integer n=Integer.parseInt(number.getText().toString());
+                                                 if (!number.getText().toString().equals("")) {
+                                                     person.setSport(true);
 
-                        person.setHowManySport(n);
-                    }
-                }
-                if (radio30.isChecked()) { person.setSport(false); }
+                                                     Log.d("you are in sport", "yes");
+                                                     Integer n = Integer.parseInt(number.getText().toString());
+                                                     person.setHowManySport(n);
 
-                if (radio26.isChecked() | radio31.isChecked()) {
-                    if (radio26.isChecked()) { person.setSmoke(true); }
-                    if (radio31.isChecked()) { person.setSmoke(false); }
-                }
+                                                     Intent lecturechant = new Intent(this, Results.class);
+                                                     lecturechant.putExtra("FromEnvtToResult", this.person);
+                                                     startActivity(lecturechant);
+                                                 } else {
+                                                     toast.show();
+                                                 }
+                                             }
+                                             if(radio30.isChecked()){ person.setSport(false);
+                                                 Intent lecturechant = new Intent(this, Results.class);
+                                                 lecturechant.putExtra("FromEnvtToResult", this.person);
+                                                 startActivity(lecturechant);
+                                             }
+
+
+
+
+                                 }
                 else {
                     toast.show();
                 }
@@ -77,9 +92,7 @@ public class Environment extends AppCompatActivity {
             toast.show();
         }
 
-        Intent lecturechant = new Intent(this, Results.class);
-        lecturechant.putExtra("FromEnvtToResult", this.person);
-        startActivity(lecturechant);
+
 
     }
 

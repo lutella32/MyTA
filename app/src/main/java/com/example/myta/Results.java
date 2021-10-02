@@ -18,7 +18,7 @@ public class Results extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
-
+        person = new Person();
         Intent intent = getIntent();
         if(intent != null) {
             Person transferredPerson = intent.getParcelableExtra("FromEnvtToResult");
@@ -68,16 +68,17 @@ public class Results extends AppCompatActivity {
                 if (person.getAppointment()==false){ cardio.setText("Appointment with a cardiologist : no"); }
 
                 TextView Sed = findViewById(R.id.textView14);
-                if (person.getSendentary()==true){ Sed.setText("Sedentary work : yes"); }
                 if (person.getSendentary()==false){ Sed.setText("Sedentary work : no"); }
+                if (person.getSendentary()==true){ Sed.setText("Sedentary work : yes"); }
+
 
                 TextView sp = findViewById(R.id.textView30);
-                if (person.getCheckpoint()==true){ sp.setText("Doing sport regularly : yes"); }
-                if (person.getCheckpoint()==false){ sp.setText("Doing sport regularly : no"); }
+                if (person.getSport()==true){ sp.setText("Doing sport regularly : yes"); }else{sp.setText("Doing sport regularly : no");}
+                //if (person.getSport()==false){ sp.setText("Doing sport regularly : no"); }
 
                 TextView sm = findViewById(R.id.textView31);
-                if (person.getAppointment()==true){ sm.setText("Smoking : yes"); }
-                if (person.getAppointment()==false){ sm.setText("Smoking : no"); }
+                if (person.getSmoke()==true){ sm.setText("Smoking : yes"); }
+                if (person.getSmoke()==false){ sm.setText("Smoking : no"); }
 
 
               /*  if(person.getImc().equals(Person.Imc.yes)){

@@ -27,6 +27,7 @@ public class Advice extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_advice2);
+        person =  new Person();
         processIntentData();
 
         afficheInformation(person);

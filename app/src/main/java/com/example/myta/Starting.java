@@ -18,6 +18,8 @@ public class Starting extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        person = new Person();
+
         processIntentData();
         setContentView(R.layout.activity_starting);
         //person = new Person();

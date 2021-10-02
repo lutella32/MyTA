@@ -20,6 +20,7 @@ public class myheart extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        person = new Person();
         processIntentData();
         setContentView(R.layout.activity_myheart);
       // person = new Person();
@@ -29,32 +30,32 @@ public class myheart extends AppCompatActivity {
     public void goSuivi(View view) {
 
         //Cardiac disease
-        RadioGroup CardiacD = findViewById(R.id.radioGroup4);
+        //RadioGroup CardiacD = findViewById(R.id.radioGroup4);
         RadioButton button6 = findViewById(R.id.radioButton6);
         RadioButton button7 = findViewById(R.id.radioButton7);
 
         //Cholesterol
-        RadioGroup Cholest = findViewById(R.id.radioGroup2);
+        //RadioGroup Cholest = findViewById(R.id.radioGroup2);
         RadioButton button19 = findViewById(R.id.radioButton19);
         RadioButton button22 = findViewById(R.id.radioButton22);
 
         //Diabete
-        RadioGroup Diabete = findViewById(R.id.radioGroup5);
+        //RadioGroup Diabete = findViewById(R.id.radioGroup5);
         RadioButton button13 = findViewById(R.id.radioButton13);
         RadioButton button18 = findViewById(R.id.radioButton18);
 
 
         //Hypertention
-        RadioGroup Hypertension = findViewById(R.id.radioGroup);
+        //RadioGroup Hypertension = findViewById(R.id.radioGroup);
         RadioButton button20 = findViewById(R.id.radioButton20);
         RadioButton button21 = findViewById(R.id.radioButton21);
         //Parent with cardiac problem
-        RadioGroup CardiacParent = findViewById(R.id.radioGroup3);
+        //RadioGroup CardiacParent = findViewById(R.id.radioGroup3);
         RadioButton button9 = findViewById(R.id.radioButton9);
         RadioButton button8 = findViewById(R.id.radioButton8);
         RadioButton button10 = findViewById(R.id.radioButton10);
         //IMC
-        RadioGroup IMC = findViewById(R.id.radioGroup6);
+        //RadioGroup IMC = findViewById(R.id.radioGroup6);
         RadioButton button16 = findViewById(R.id.radioButton16);
         RadioButton button17 = findViewById(R.id.radioButton17);
         RadioButton button23 = findViewById(R.id.radioButton23);
@@ -84,8 +85,8 @@ public class myheart extends AppCompatActivity {
                 if(button20.isChecked() | button21.isChecked()) {
                     Log.d("ht","yes");
                    // String HTValue = ((RadioButton)findViewById(CardiacD.getCheckedRadioButtonId())).getText().toString();
-                    if (button20.isChecked()){ person.setHypertension(true); }
-                    if (button21.isChecked()){ person.setHypertension(false); }
+                    if (button20.isChecked()){ person.setHypertension(true); }else{person.setHypertension(false); }
+                   // if (button21.isChecked()){ }
 
                     if(button9.isChecked() | button8.isChecked() | button10.isChecked()) {
                         Log.d("cpvalue","yes");
@@ -103,8 +104,9 @@ public class myheart extends AppCompatActivity {
                             if(button13.isChecked() | button18.isChecked()) {
                                // String DiabeteValue = ((RadioButton)findViewById(CardiacD.getCheckedRadioButtonId())).getText().toString();
                                 Log.d("diabet","yes");
-                                if (button13.isChecked()){ person.setDiab(true); }
-                                if (button18.isChecked()){ person.setDiab(false); }
+                                if (button13.isChecked()){ person.setDiabet(true); Log.d("diabet","y");}
+
+                                if (button18.isChecked()){ person.setDiabet(false); }
                                // person.print();
                                 Intent lecturechant = new Intent(this, Suivi.class);
                                 lecturechant.putExtra("FromSmyHeartToSuivi", this.person);

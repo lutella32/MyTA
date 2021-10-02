@@ -15,7 +15,9 @@ public class Suivi extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_suivi);
+        person = new Person();
         processIntentData();
         //person = new Person();
 
